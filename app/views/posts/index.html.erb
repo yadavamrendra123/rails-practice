@@ -1,0 +1,22 @@
+<h1>Posts index page</h1>
+
+
+
+<table>
+  <thead>
+  <tr>
+    <th>Tile</th>
+    <th>Description</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <body>
+  <%@posts.each do |post| %>
+  <tr>
+    <td><%= post.title %></td>
+    <td><%= post.description %></td>
+    <td></td>
+  </tr>
+    <%end %>
+  </body>
+</table>
