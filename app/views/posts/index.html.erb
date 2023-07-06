@@ -2,9 +2,10 @@
 
 
 
-<table>
+<table style="border:1px solid red">
   <thead>
   <tr>
+    <th>Id</th>
     <th>Tile</th>
     <th>Description</th>
     <th>Actions</th>
@@ -13,9 +14,11 @@
   <body>
   <%@posts.each do |post| %>
   <tr>
+    <td><%=post.id %></td>
     <td><%= post.title %></td>
     <td><%= post.description %></td>
-    <td></td>
+
+    <td><%= button_to 'Delete',  post_path(post),  method: :delete %></td>
   </tr>
     <%end %>
   </body>
